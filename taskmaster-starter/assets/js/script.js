@@ -19,6 +19,10 @@ var createTask = function (taskText, taskDate, taskList) {
   $("#list-" + taskList).append(taskLi);
 };
 
+$(".card .list-group").sortable({
+  connectWith: $(".card .list-group")
+});
+
 var loadTasks = function () {
   tasks = JSON.parse(localStorage.getItem("tasks"));
 
